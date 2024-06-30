@@ -1,0 +1,43 @@
+.teste {
+    padding: 0 px;
+    margin: 0 px;
+    box-sizing: border-box;
+    
+}
+
+.home_h1{
+    color: rgb(14, 13, 13);
+    margin: auto;
+    padding-top: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow:  5 10px  black;
+    text-indent: 20px;
+    text-align: center;
+    background-color: rgb(255, 238, 0);
+}
+
+.container_home {
+    background-color: rgb(255, 238, 0);
+    display: flex;
+    justify-content:center;
+    margin: 0 auto;
+    padding: 10px 2px;
+}
+
+.btn-home {
+    background-color: rgb(5, 5, 0);
+    color: rgb(255, 238, 0);
+    border: none;
+    font-weight: bold;
+    margin-right: 20px;
+    width: 250px;
+   
+}
+
+.btn-home:hover {
+    background-color: rgba(0, 0, 0, 0.719);
+}
+
+
+
+
