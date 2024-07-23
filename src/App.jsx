@@ -4,11 +4,11 @@ import 'primereact/resources/themes/saga-blue/theme.css';  // Tema do
 import 'primereact/resources/primereact.min.css';          // Estilos 
 import 'primeicons/primeicons.css';                        // Ícones do
 
-
 import './App.css'
 import Login from './components/pages/login/login';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from './components/pages/home/Home';
+import Carga from './components/pages/carga/Carga';
 
 export default function App() {
   return (
@@ -17,6 +17,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/home" element={<Home />} />
+        <Route path='/carga' element={<Carga />} />
       </Routes>
     </BrowserRouter>
     </PrimeReactProvider>

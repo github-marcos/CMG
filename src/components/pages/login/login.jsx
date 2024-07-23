@@ -14,7 +14,6 @@ const Login = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-
         /* alert("dados enviados:" + username + " - " + password) */
     };
 

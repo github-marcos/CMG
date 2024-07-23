@@ -17,16 +17,37 @@ export default function Home() {
         {
             items: [
                 {
-                    label: 'Armas',
-                    command: () => {
-                        setIsArma(true);
-                    }
+                    template: () => (
+                        <span
+                            className="p-1 w-[250px]  cursor-pointer hover:bg-[#e1e1e1] "
+                            onClick={() => setIsArma(true)}
+                            style={{ display: 'inline-block' }} // Adicionado para garantir a aplicação da largura
+                        >
+                            Armas
+                        </span>
+                    ),
                 },
                 {
-                    label: 'Coletes',
+                    template: () => (
+                        <span
+                            className="p-1 w-[250px]  cursor-pointer hover:bg-[#e1e1e1] "
+                            onClick={() => setIsArma(true)}
+                            style={{ display: 'inline-block' }} // Adicionado para garantir a aplicação da largura
+                        >
+                            Coletes
+                        </span>
+                    ),
                 },
                 {
-                    label: 'Munição',
+                    template: () => (
+                        <span
+                            className="p-1 w-[250px]  cursor-pointer hover:bg-[#e1e1e1] "
+                            onClick={() => setIsArma(true)}
+                            style={{ display: 'inline-block' }} // Adicionado para garantir a aplicação da largura
+                        >
+                            Munições
+                        </span>
+                    ),
                 }
             ]
         }
@@ -36,22 +57,37 @@ export default function Home() {
         {
             items: [
                 {
-                    label: 'Guarda-chuvas',
-                    command: () => {
-                       
-                    }
+                    template: () => (
+                        <span
+                            className="p-1 w-[250px]  cursor-pointer hover:bg-[#e1e1e1] "
+                            onClick={() => setIsArma(true)}
+                            style={{ display: 'inline-block' }} // Adicionado para garantir a aplicação da largura
+                        >
+                            Giro-flex
+                        </span>
+                    ),
                 },
                 {
-                    label: 'Giro-flex',
-                    command: () => {
-                      
-                    }
+                    template: () => (
+                        <span
+                            className="p-1 w-[250px] cursor-pointer hover:bg-[#e1e1e1] "
+                            onClick={() => setIsArma(true)}
+                            style={{ display: 'inline-block' }} // Adicionado para garantir a aplicação da largura
+                        >
+                            Guarda-chuva
+                        </span>
+                    ),
                 },
                 {
-                    label: 'Cone',
-                    command: () => {
-                       
-                    }
+                    template: () => (
+                        <span
+                            className="p-1 w-[250px]  cursor-pointer hover:bg-[#e1e1e1] "
+                            onClick={() => setIsArma(true)}
+                            style={{ display: 'inline-block' }} // Adicionado para garantir a aplicação da largura
+                        >
+                            Cones
+                        </span>
+                    ),
                 }
             ]
         }
@@ -59,24 +95,32 @@ export default function Home() {
 
 
     return (
-        <div >
-            <h1 className="home_h1" > Sala de meios</h1>
-            <div className="container_home">
-                <nav className="nav">
-                    <div className="card flex justify-content-center">
-                        <Toast ref={toast}></Toast>
-                        <Menu model={itemsBelico} popup ref={menuLeft} id="popup_menu_left" />
+        <div className="bg-[#e1e1e1]">
+            <div className="pb-8 bg-[#ffee00] w-full flex flex-col justify-center">
+                <h1 className="text-4xl mt-8 text-center font-bold" > Sala de meios</h1>
+                <div className="flex w-full justify-center">
+                    <nav className="">
+                        <div className="card flex justify-content-center">
+                            <Toast ref={toast}></Toast>
+                            <Menu className=" w-[250px]" model={itemsBelico} popup ref={menuLeft} id="popup_menu_left" />
 
-                        <Button label="Bélico"  className="btn-home" onClick={(event) => menuLeft.current.toggle(event)} aria-controls="popup_menu_left" aria-haspopup />
-                        <Menu model={itemsNaoBelico} popup ref={menuRight} id="popup_menu_right" popupAlignment="right" />
+                            <Button label="Bélico" className="btn-home" onClick={(event) => menuLeft.current.toggle(event)} aria-controls="popup_menu_right" aria-haspopup />
+                            <Menu className=" w-[250px]" model={itemsNaoBelico} popup ref={menuRight} id="popup_menu_right" popupAlignment="right" />
 
-                        <Button label="Não Bélico" className="btn-home" onClick={(event) => menuRight.current.toggle(event)} aria-controls="popup_menu_right" aria-haspopup />
-                    </div>
-                </nav>
+                            <Button label="Não Bélico" className="btn-home" onClick={(event) => menuRight.current.toggle(event)} aria-controls="popup_menu_right" aria-haspopup />
+                        </div>
+                    </nav>
+
+                </div>
             </div>
-        {isArma &&
-            <Armas />
-        }
+            <div className="bg-[#e1e1e1] h-screen">
+
+                {isArma &&
+
+                    <Armas />
+
+                }
+            </div>
         </div>
 
     );

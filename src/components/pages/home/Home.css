@@ -1,37 +1,27 @@
-.teste {
-    padding: 0 px;
-    margin: 0 px;
-    box-sizing: border-box;
-    
+.logo_cmg {
+   background-color: #e1e1e1;
+   height: 100vh;
 }
 
-.home_h1{
-    color: rgb(14, 13, 13);
-    margin: auto;
-    padding-top: 15px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-shadow:  5 10px  black;
-    text-indent: 20px;
-    text-align: center;
-    background-color: rgb(255, 238, 0);
-}
-
-.container_home {
+.nav_home {
     background-color: rgb(255, 238, 0);
     display: flex;
+    flex-direction: column;
     justify-content:center;
+    text-align: center;
     margin: 0 auto;
-    padding: 10px 2px;
+    padding: 25px 2px;
 }
 
 .btn-home {
     background-color: rgb(5, 5, 0);
-    color: rgb(255, 238, 0);
+    color: #ffee00;
     border: none;
     font-weight: bold;
     margin-right: 20px;
     width: 250px;
-   
+   height: 40px;
+   margin-top: 25px;
 }
 
 .btn-home:hover {

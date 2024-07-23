@@ -11,11 +11,11 @@ export default function Armas() {
 
     const [selectedArma, setSelectedArma] = useState(null);
     const [products, setProducts] = useState([
-        { id: "1", category: "SEY77771", name: "Sd Oliveira", date: formatDateToBR(new Date()) },
-        { id: "2", category: "SEY77771", name: "Sd Oliveira", date: formatDateToBR(new Date()) },
-        { id: "3", category: "SEY77771", name: "Sd Oliveira", date: formatDateToBR(new Date()) },
-        { id: "4", category: "SEY77771", name: "Sd Oliveira", date: formatDateToBR(new Date()) },
-        { id: "5", category: "SEY77771", name: "Sd Oliveira", date: formatDateToBR(new Date()) },
+        { id: "1", category: "SEY77771", name: "SD Oliveira", date: formatDateToBR(new Date()) },
+        { id: "2", category: "SEY77703", name: "SD Oliveira", date: formatDateToBR(new Date()) },
+        { id: "3", category: "SVH58625", name: "SD Oliveira", date: formatDateToBR(new Date()) },
+        { id: "4", category: "SWG93615", name: "SD Oliveira", date: formatDateToBR(new Date()) },
+        { id: "5", category: "SFX28573", name: "SD Oliveira", date: formatDateToBR(new Date()) },
     ]);
 
     const cities = [
@@ -40,22 +40,22 @@ export default function Armas() {
     return (
         <>
             <div className="select-armas">
-                <h1>Armas</h1>
-                <label>Selecione uma Arma:</label>
+                <h1 className="text-[25px] font-bold">Armas</h1>
+                <label className="font-semibold">Selecione uma arma:</label>
                 <Dropdown value={selectedArma} onChange={(e) => setSelectedArma(e.value)} options={cities} optionLabel="name"
                     placeholder="Selecionar" className="select" />
             </div>
             {selectedArma &&
-                <div className="tables">
-                    <div className="card-table">
-                        <h1 style={{ color: '#01aa01' }}>Não Cargueadas</h1>
-                        <DataTable value={products} tableStyle={{ minWidth: '100%', color: 'red' }}>
-                            <Column className="" field="id" header="Id" style={{ color: '#01aa01' }}></Column>
-                            <Column field="category" header="Tipe" style={{ color: '#01aa01' }}></Column>
-                            <Column field="name" header="Nome" style={{ color: '#01aa01' }}></Column>
+                <div className="w-full flex justify-around">
+                    <div className="card w-[48%] mt-10 bg-[#fff]">
+                        <h1 className="p-2 text-[25px] font-bold text-[#01aa01] ">Disponíveis</h1>
+                        <DataTable className="text-[#01aa01]" value={products} tableStyle={{ minWidth: '100%', color: 'red' }}>
+                            <Column style={{ color: '#01aa01' }} field="id" header="Qt" ></Column>
+                            <Column field="category" header="Tipo" style={{ color: '#01aa01' }}></Column>
+                            <Column style={{ color: '#01aa01' }}></Column>
                         </DataTable>
                     </div>
-                    <div className="card-table">
+                    <div className="w-[48%] mt-10">
                         <h1 style={{ color: '#ff0000' }}>Cargueadas</h1>
                         <DataTable value={products} tableStyle={{ minWidth: '100%', color: 'red' }}>
                             <Column className="" field="id" header="Id" style={{ color: '#ff0000' }}></Column>
