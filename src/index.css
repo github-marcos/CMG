@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Importação dos temas e estilos do PrimeReact */
 @import 'primereact/resources/themes/saga-blue/theme.css';
 @import 'primereact/resources/primereact.min.css';
 @import 'primeicons/primeicons.css';
+@import 'primeflex/primeflex.css'; /* Opcional, para utilizar o sistema de grid do PrimeReact */

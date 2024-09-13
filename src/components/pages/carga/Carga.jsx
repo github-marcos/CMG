@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import "./Carga.css";
 import { FaLock, FaUser } from "react-icons/fa";
+import { InputText } from "primereact/inputtext";
+import { acessorios, coletes, portateis, portes } from "../../../Utils/api";
 
 export default function Carga() {
 
@@ -19,16 +21,26 @@ export default function Carga() {
     return (
         <>
             <div className="geral">
+
                 <div className="container">
                     <form onSubmit={handleSubmit}>
                         <h1 > Sala de meios </h1>
                         <div className="input-field">
-                            <input type="email"
-                                placeholder="Porte"
-                                onChange={(e) => setUsername(e.target.value)} /><FaUser className="icon" />
+                            <select >
+                                <option>
+                                    Porte
+                                </option>
+                                {portes.map((porte) => {
+                                    return (
+                                        <option>
+                                            {porte.nome}
+                                        </option>
+                                    )
+                                })}
+                            </select>
                         </div>
                         <div className="input-field">
-                            <input type="email"
+                            <input type="number"
                                 placeholder="Carregadores"
                                 onChange={(e) => setUsername(e.target.value)} /><FaUser className="icon" />
                         </div>
@@ -38,9 +50,18 @@ export default function Carga() {
                                 onChange={(e) => setUsername(e.target.value)} /><FaUser className="icon" />
                         </div>
                         <div className="input-field">
-                            <input type="name"
-                                placeholder="Portatel"
-                                onChange={(e) => setUsername(e.target.value)} /><FaUser className="icon" />
+                        <select >
+                                <option>
+                                    Portateis
+                                </option>
+                                {portateis.map((portatil) => {
+                                    return (
+                                        <option>
+                                            {portatil.nome}
+                                        </option>
+                                    )
+                                })}
+                            </select>
                         </div>
                         <div className="input-field">
                             <input type="number"
@@ -53,18 +74,36 @@ export default function Carga() {
                                 onChange={(e) => setUsername(e.target.value)} /><FaUser className="icon" />
                         </div>
                         <div className="input-field">
-                            <input type="name"
-                                placeholder="Acessórios"
-                                onChange={(e) => setUsername(e.target.value)} /><FaUser className="icon" />
+                        <select >
+                                <option>
+                                    Acessorio
+                                </option>
+                                {acessorios.map((acessorio) => {
+                                    return (
+                                        <option>
+                                            {acessorio.nome}
+                                        </option>
+                                    )
+                                })}
+                            </select>
                         </div>
                         <div className="input-field">
-                            <input type="name"
-                                placeholder="Nome"
-                                onChange={(e) => setUsername(e.target.value)} /><FaUser className="icon" />
+                        <select >
+                                <option>
+                                    Colete
+                                </option>
+                                {coletes.map((colete) => {
+                                    return (
+                                        <option>
+                                            {colete.nome}
+                                        </option>
+                                    )
+                                })}
+                            </select>
                         </div>
                         <div className="input-field">
-                            <input type='name'
-                                placeholder='senha'
+                            <input type='email'
+                                placeholder='E-mail'
                                 onChange={(e) => setPassword(e.target.value)} /><FaLock className="icon" />
                         </div>
                         <div className="input-field">
