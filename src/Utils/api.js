@@ -10,6 +10,16 @@ export const portes = [
  
 ]
 
+export const numeroDeSerie = [
+  
+    {nome:"SEY77771"},
+    {nome:"SEY77703"},
+    {nome:"SVH58625"},
+    {nome:"SWG93615"},
+    {nome:"SFX28573"},
+    
+]
+
 export const portateis = [
   
     {nome:"SMT.40"},
